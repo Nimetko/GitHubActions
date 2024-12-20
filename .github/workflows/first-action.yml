@@ -1,0 +1,20 @@
+# 1. Add your workflow a name
+name: My First Workflow
+# 2. after name, put WHEN this workflow should be executed: keyword: "on"
+on: workflow_dispatch # this make sure that we can manually triger this workflow
+# 3. Name, when ... we are missing just WORK to be done :). for this we have "jobs"
+# yaml works with inded. If we indend the line below a line, that line belogs the the 
+# upper line (Press Tab)
+# job is starting with name
+# check the runners https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
+# then steps, we need to add list of steps. Each step, starting with dash
+# you should give step a name, to easier identify it
+jobs:
+  my-first-real-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print something else than Hello World
+        run: echo "The Old Star Wars is the Real Star Wars."
+      - name: Do something more usefull
+        run: echo "I think, I should install some package instead of using just echo ..."
+      
