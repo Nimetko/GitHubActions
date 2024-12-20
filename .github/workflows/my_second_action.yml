@@ -1,0 +1,12 @@
+name: MySecondAction
+on: workflow_dispatch
+jobs:
+  my_job_number_one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: another_step
+        run: echo "This is Another Step"
+      - name: multiline_bash_step
+        run: |
+          echo "First line"
+          echo "Second line"
